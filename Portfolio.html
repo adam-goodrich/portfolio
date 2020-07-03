@@ -24,13 +24,11 @@
 
 <style>
 
-/* Base reset */
 * {
   margin: 0;
   padding: 0;
 }
 
-/* box-sizing and font sizing */
 *,
 *::before,
 *::after {
@@ -39,56 +37,32 @@
 
 html {
   box-sizing: border-box;
-
-  /* Set font size for easy rem calculations
-   * default document font size = 16px, 1rem = 16px, 100% = 16px
-   * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
-  */
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
 
-/* A few media query to set some font sizes at different screen sizes.
- * This helps automate a bit of responsiveness.
- * The trick is to use the rem unit for size values, margin and padding.
- * Because rem is relative to the document font size
- * when we scale up or down the font size on the document
- * it will affect all properties using rem units for the values.
-*/
 
-/* I am using the em unit for breakpoints
- * The calculation is the following
- * screen size divided by browser base font size
- * As an example: a breakpoint at 980px
- * 980px / 16px = 61.25em
-*/
-
-/* 1200px / 16px = 75em */
 @media (max-width: 75em) {
   html {
     font-size: 60%;
   }
 }
 
-/* 980px / 16px = 61.25em */
 @media (max-width: 61.25em) {
   html {
     font-size: 58%;
   }
 }
 
-/* 460px / 16px = 28.75em */
 @media (max-width: 28.75em) {
   html {
     font-size: 55%;
   }
 }
 
-/* Base styles */
-
 body {
   font-family: 'Poppins', sans-serif;
-  font-size: 1.8rem; /* 18px */
+  font-size: 1.8rem;
   font-weight: 400;
   line-height: 1.4;
   color: #eeeeee;
@@ -116,15 +90,12 @@ ul {
 a {
   text-decoration: none;
   color: #eeeeee;
-  
 }
 
 img {
   display: block;
   width: 100%;
 }
-
-/* nav */
 
 .nav {
   display: flex;
@@ -141,7 +112,6 @@ img {
   display: flex;
   margin-right: 2rem;
   text-shadow: 2px 2px 1px #1f1f1f;
-
 }
 
 @media (max-width: 28.75em) {
@@ -164,8 +134,6 @@ img {
   background: #393e46;
 }
 
-/* Welcome section */
-
 .welcome-section {
   display: flex;
   flex-direction: column;
@@ -176,9 +144,7 @@ img {
   background-color: #000;
   background-image: linear-gradient(#393e46 0%, #222831 100%);
   text-shadow: 2px 2px 1px #1f1f1f;
-
 }
-
 
 .welcome-section > p {
   font-size: 3rem;
@@ -193,8 +159,6 @@ img {
   transform: translateY(.2em);
 }
 
-/* Projects section */
-
 .projects-section {
   text-align: center;
   padding: 10rem 2rem;
@@ -205,6 +169,7 @@ img {
   max-width: 640px;
   margin: 0 auto 6rem auto;
   border-bottom: 0.2rem solid #eeeeee;
+  text-shadow: 2px 2px 1px #1f1f1f;
 }
 
 @media (max-width: 28.75em) {
@@ -213,7 +178,6 @@ img {
   }
 }
 
-/* "Automagic" image grid using no media queries */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -278,7 +242,6 @@ img {
   padding: 0 2rem;
   background: #393e46;
   text-shadow: 2px 2px 1px #1f1f1f;
-
 }
 
 .contact-section-header > h2 {
@@ -288,15 +251,12 @@ img {
 @media (max-width: 28.75em) {
   .contact-section-header > h2 {
     font-size: 4rem;
-
   }
 }
 
 .contact-section-header > p {
   text-align: center;
   text-shadow: 2px 2px 1px #1f1f1f;
-
-
 }
 
 .contact-links {
@@ -314,8 +274,6 @@ img {
   text-shadow: 2px 2px 1px #1f1f1f;
   transition: transform 0.3s ease-out;
   text-align: center;
-
-  
 }
 
 .contact-details:hover {
@@ -323,38 +281,19 @@ img {
   font-size: 3rem;
 }
 
-/* Footer */
-
 footer {
-  font-weight: 300;
+  font-weight: 500;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
-  padding: 2rem;
+  padding: 3rem;
   background: #00adb5;
   text-shadow: 2px 2px 1px #1f1f1f;
-
+  align-items: center;
 }
 
-footer > p {
-  margin: 2rem;
-  justify-content: right;
-  text-align: center;
-}
-
-left_side {
-  grid-column: 1;
-}
-
-div {
-  grid-column: 3;
-  text-align: center;
-
-}
-
-
-footer i {
-  vertical-align: middle;
+right_side {
+    text-align: right;
+    padding-right: 1em;
 }
 
 @media (max-width: 28.75em) {
@@ -370,18 +309,20 @@ footer i {
         <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&amp;display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Raleway:700&amp;display=swap" rel="stylesheet">
 
-        <nav id="navbar" class="nav">
-            <div><a href="https://www.logolynx.com/images/logolynx/a2/a2ea819f7b1fecc42b3de4556ac6c9d1.jpeg"></a></div>
-                <ul class="nav-list">
-                    <li>
-                        <a href="#welcome-section">Who I Am</a>
-                    </li>
-                    <li>
-                        <a href="#projects">What I've Done</a>
-                    </li>
-                    <li>
-                        <a href="#contact">Let's Get In Touch</a>
-                    </li>
+        <nav class="nav">
+            <div>
+                <a href="https://www.logolynx.com/images/logolynx/a2/a2ea819f7b1fecc42b3de4556ac6c9d1.jpeg"></a>
+            </div>
+            <ul class="nav-list">
+                <li>
+                    <a href="#welcome-section">Who I Am</a>
+                </li>
+                <li>
+                    <a href="#projects">What I've Done</a>
+                </li>
+                <li>
+                    <a href="#contact">Let's Get In Touch</a>
+                </li>
             </ul>
         </nav>
 
@@ -405,52 +346,52 @@ footer i {
             <h2 class="projects-section-header">Here is some of my work</h2>
             <div class="projects-grid">
                 <a href="https://github.com/adam-goodrich/Coin-Toss-Game" target="_blank" class="project project-tile">
-                <img class="project-image" src="https://justflipacoin.com/img/share-a-coin.png" alt="Pic of a coin toss for a coin toss game logo">
-                <p class="project-title">
-                <span class="code">(</span>
-                Coin Toss Game
-                <span class="code">)</span>
-                </p>
+                    <img class="project-image" src="https://justflipacoin.com/img/share-a-coin.png" alt="Pic of a coin toss for a coin toss game logo">
+                    <p class="project-title">
+                    <span class="code">(</span>
+                        Coin Toss Game
+                    <span class="code">)</span>
+                    </p>
                 </a>
                 <a href="https://github.com/adam-goodrich/Star-Shooter" target="_blank" class="project project-tile">
-                <img class="project-image" src="https://static4.depositphotos.com/1009919/329/v/450/depositphotos_3297761-stock-illustration-space-invaders-vector-isolated-on.jpg" alt="Space Invaders Style Game PIC">
-                <p class="project-title">
-                <span class="code">(</span>
-                Star-Shooter Game
-                <span class="code">)</span>
-                </p>
+                    <img class="project-image" src="https://static4.depositphotos.com/1009919/329/v/450/depositphotos_3297761-stock-illustration-space-invaders-vector-isolated-on.jpg" alt="Space Invaders Style Game PIC">
+                    <p class="project-title">
+                    <span class="code">(</span>
+                        Star-Shooter Game
+                    <span class="code">)</span>
+                    </p>
                 </a>
                 <a href="https://github.com/adam-goodrich/Rock_Paper_Scissors_Game" target="_blank" class="project project-tile">
-                <img class="project-image" src="https://static.vecteezy.com/system/resources/previews/000/691/498/non_2x/rock-paper-scissors-pop-art-vector-design.jpg" alt="Rock Paper Scissors Pic">
-                <p class="project-title">
-                <span class="code">(</span>
-                Rock Paper Scissors Game
-                <span class="code">)</span>
-                </p>
+                    <img class="project-image" src="https://static.vecteezy.com/system/resources/previews/000/691/498/non_2x/rock-paper-scissors-pop-art-vector-design.jpg" alt="Rock Paper Scissors Pic">
+                    <p class="project-title">
+                    <span class="code">(</span>
+                        Rock Paper Scissors Game
+                    <span class="code">)</span>
+                    </p>
                 </a>
                 <a href="https://github.com/adam-goodrich/MP3_Game" target="_blank" class="project project-tile">
-                <img class="project-image" src="https://www.onlinelogomaker.com/blog/wp-content/uploads/2017/06/music-logo-design.jpg" alt="MP3 LOGO IMAGE">
-                <p class="project-title">
-                <span class="code">(</span>
-                Python MP3 GAME
-                <span class="code">)</span>
-                </p>
+                    <img class="project-image" src="https://www.onlinelogomaker.com/blog/wp-content/uploads/2017/06/music-logo-design.jpg" alt="MP3 LOGO IMAGE">
+                    <p class="project-title">
+                    <span class="code">(</span>
+                        Python MP3 GAME
+                    <span class="code">)</span>
+                    </p>
                 </a>
                 <a href="https://codepen.io/adam-goodrich/pen/eYJJXzo" target="_blank" class="project project-tile">
-                <img class="project-image" src="https://media3.s-nbcnews.com/j/newscms/2016_41/1749326/161013-bob-dylan-sunglasses-1104a_c7727c145cc2b0526e413693f8692fbb.fit-760w.jpg" alt="Bob Dylan Looking Cool">
-                <p class="project-title">
-                <span class="code">(</span>
-                Bob Dylan Tribute Page
-                <span class="code">)</span>
-                </p>
+                    <img class="project-image" src="https://media3.s-nbcnews.com/j/newscms/2016_41/1749326/161013-bob-dylan-sunglasses-1104a_c7727c145cc2b0526e413693f8692fbb.fit-760w.jpg" alt="Bob Dylan Looking Cool">
+                    <p class="project-title">
+                    <span class="code">(</span>
+                        Bob Dylan Tribute Page
+                    <span class="code">)</span>
+                    </p>
                 </a>
                 <a href="https://github.com/adam-goodrich/STAR-OUT" target="_blank" class="project project-tile">
-                <img class="project-image" src="https://s3.amazonaws.com/static.graphemica.com/glyphs/i500s/000/005/892/original/2730-500x500.png?1275296206" alt="A star for the STAR OUT LOGO">
-                <p class="project-title">
-                <span class="code">(</span>
-                STAR-OUT Text Converter
-                <span class="code">)</span>
-                </p>
+                    <img class="project-image" src="https://s3.amazonaws.com/static.graphemica.com/glyphs/i500s/000/005/892/original/2730-500x500.png?1275296206" alt="A star for the STAR OUT LOGO">
+                    <p class="project-title">
+                    <span class="code">(</span>
+                        STAR-OUT Text Converter
+                    <span class="code">)</span>
+                    </p>
                 </a>
             </div>
         </section>
@@ -460,8 +401,8 @@ footer i {
             <div class="contact-section-header">
                 <h2>Let's Get In Touch</h2>
                 <p>I Would love to hear from you</p>
-                </div>
-                <div class="contact-links">
+            </div>
+            <div class="contact-links">
                 <a href="https://www.linkedin.com/in/adam-goodrich-55169677/" target="_blank" class="btn contact-details"><i class="fab fa-linkedin"></i> LinkedIn<br><div style="font-size: 12px;">linkedin.com</div></a>
                 <a id="profile-link" href="https://github.com/adam-goodrich" target="_blank" class="btn contact-details"><i class="fab fa-github"></i> GitHub<br><div style="font-size: 12px;">github.com/adam-goodrich</div></a>
                 <a href="https://twitter.com/Adam_Goodrich" target="_blank" class="btn contact-details"><i class="fab fa-twitter"></i> Twitter<br><div style="font-size: 12px;">@Adam_Goodrich</div></a>
@@ -475,15 +416,10 @@ footer i {
             <left_side>
               Created By Adam Goodrich 2020
             </left_side>
-          </div>
-          <div>
-            <right_side>
+            <p></p>
+            <right_side >
               <a href="#welcome-section" class="click_here">Back To Top</a>
             </right_side>
-
-          
-            
-
         </footer>
     </body>
 </html>
