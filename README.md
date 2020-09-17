@@ -1,3 +1,2 @@
-# portfolio
-
-HTML/ CSS Web Portfolio To Showcase myself and my work
+# adam_goodrich_portfolio
+My online portfolio

@@ -20,289 +20,9 @@
   
     <link rel="manifest" href="site.webmanifest">
     <link rel="apple-touch-icon" href="icon.png">
+    <link rel = "stylesheet" type = "text/css" href = "style.css" />
     <meta charset="UTF-8">
 
-<style>
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-html {
-  box-sizing: border-box;
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-}
-
-
-@media (max-width: 75em) {
-  html {
-    font-size: 60%;
-  }
-}
-
-@media (max-width: 61.25em) {
-  html {
-    font-size: 58%;
-  }
-}
-
-@media (max-width: 28.75em) {
-  html {
-    font-size: 55%;
-  }
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.8rem;
-  font-weight: 400;
-  line-height: 1.4;
-  color: #eeeeee;
-}
-
-h1,
-h2 {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  text-align: center;
-}
-
-h1 {
-  font-size: 6rem;
-}
-
-h2 {
-  font-size: 4.2rem;
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: #eeeeee;
-}
-
-img {
-  display: block;
-  width: 100%;
-}
-
-.nav {
-  display: flex;
-  justify-content: left;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: #00adb5;
-  z-index: 10;
-}
-
-.nav-list {
-  display: flex;
-  margin-right: 2rem;
-  text-shadow: 2px 2px 1px #1f1f1f;
-}
-
-@media (max-width: 28.75em) {
-  .nav {
-    justify-content: center;
-  }
-
-  .nav-list {
-    margin: 0 1rem;
-  }
-}
-
-.nav-list a {
-  display: block;
-  font-size: 2.2rem;
-  padding: 2rem;
-}
-
-.nav-list a:hover {
-  background: #393e46;
-}
-
-.welcome-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  background-color: #000;
-  background-image: linear-gradient(#393e46 0%, #222831 100%);
-  text-shadow: 2px 2px 1px #1f1f1f;
-}
-
-.welcome-section > p {
-  font-size: 3rem;
-  font-weight: 200;
-  color: #00adb5;
-}
-
-.click_here:hover {
-  transition: 2s;
-  font-size: 2rem;
-  font-weight: 200;
-  transform: translateY(.2em);
-}
-
-.projects-section {
-  text-align: center;
-  padding: 10rem 2rem;
-  background: linear-gradient(#222831 0%, #393e46 100%);
-}
-
-.projects-section-header {
-  max-width: 640px;
-  margin: 0 auto 6rem auto;
-  border-bottom: 0.2rem solid #eeeeee;
-  text-shadow: 2px 2px 1px #1f1f1f;
-}
-
-@media (max-width: 28.75em) {
-  .projects-section-header {
-    font-size: 4rem;
-  }
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-gap: 4rem;
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  margin-bottom: 6rem;
-}
-
-@media (max-width: 30.625em) {
-  .projects-section {
-    padding: 6rem 1rem;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.project {
-  background: #393e46;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  border-radius: 2px;
-}
-
-.code {
-  color: #393e46;
-  transition: color 0.3s ease-out;
-}
-
-.project:hover .code {
-  color: #00adb5;
-}
-
-.project-image {
-  height: calc(100% - 6.8rem);
-  width: 100%;
-  object-fit: cover;
-}
-
-.project-title {
-  font-size: 2rem;
-  padding: 2rem 0.5rem;
-  text-align: center;
-}
-
-.btn {
-  display: inline-block;
-  padding: 1rem 2rem;
-  border-radius: 2px;
-}
-
-.contact-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  height: 80vh;
-  padding: 0 2rem;
-  background: #393e46;
-  text-shadow: 2px 2px 1px #1f1f1f;
-}
-
-.contact-section-header > h2 {
-  font-size: 6rem;
-}
-
-@media (max-width: 28.75em) {
-  .contact-section-header > h2 {
-    font-size: 4rem;
-  }
-}
-
-.contact-section-header > p {
-  text-align: center;
-  text-shadow: 2px 2px 1px #1f1f1f;
-}
-
-.contact-links {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  max-width: 980px;
-  margin-top: 4rem;
-  flex-wrap: wrap;
-  text-align: center;
-}
-
-.contact-details {
-  font-size: 2.4rem;
-  text-shadow: 2px 2px 1px #1f1f1f;
-  transition: transform 0.3s ease-out;
-  text-align: center;
-}
-
-.contact-details:hover {
-  transition: 2s;
-  font-size: 3rem;
-}
-
-footer {
-  font-weight: 500;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding: 3rem;
-  background: #00adb5;
-  text-shadow: 2px 2px 1px #1f1f1f;
-  align-items: center;
-}
-
-right_side {
-    text-align: right;
-    padding-right: 1em;
-}
-
-@media (max-width: 28.75em) {
-  footer {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-</style>
 </head>
     <body translate="no">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
@@ -329,8 +49,8 @@ right_side {
 
         <section id="welcome-section" class="welcome-section">
             <h1>Hello, World!</h1>
-            <h1>I'm Adam Goodrich</h1>
-            <p>I am an aspriring web developer from Boston, MA</p>
+            <h2>I'm Adam Goodrich</h2>
+            <p>I am an aspiring web developer from Boston, MA</p>
             <p>I am passionate about technology, art, and learning</p>
             <p>Skills include: Python, JavaScript, HTML, and CSS</p>
             <br>
@@ -345,23 +65,23 @@ right_side {
         <section id="projects" class="projects-section">
             <h2 class="projects-section-header">Here is some of my work</h2>
             <div class="projects-grid">
-                <a href="https://github.com/adam-goodrich/Coin-Toss-Game" target="_blank" class="project project-tile">
-                    <img class="project-image" src="https://justflipacoin.com/img/share-a-coin.png" alt="Pic of a coin toss for a coin toss game logo">
+                <a href="https://adam-goodrich.github.io/calculator/" target="_blank" class="project project-tile">
+                    <img class="project-image" src="images/calc.png" alt="Pic of my calculator project">
                     <p class="project-title">
                     <span class="code">(</span>
-                        Coin Toss Game
+                        JavaScript Calculator
                     <span class="code">)</span>
                     </p>
                 </a>
-                <a href="https://github.com/adam-goodrich/Star-Shooter" target="_blank" class="project project-tile">
-                    <img class="project-image" src="https://static4.depositphotos.com/1009919/329/v/450/depositphotos_3297761-stock-illustration-space-invaders-vector-isolated-on.jpg" alt="Space Invaders Style Game PIC">
+                <a href="https://adam-goodrich.github.io/eSketch/" target="_blank" class="project project-tile">
+                    <img class="project-image" src="images/sketch.png" alt="Pixel Drawer preview">
                     <p class="project-title">
                     <span class="code">(</span>
-                        Star-Shooter Game
+                        e-Sketch Pixel Drawer
                     <span class="code">)</span>
                     </p>
                 </a>
-                <a href="https://github.com/adam-goodrich/Rock_Paper_Scissors_Game" target="_blank" class="project project-tile">
+                <a href="https://adam-goodrich.github.io/rock-paper-scissors/" target="_blank" class="project project-tile">
                     <img class="project-image" src="https://static.vecteezy.com/system/resources/previews/000/691/498/non_2x/rock-paper-scissors-pop-art-vector-design.jpg" alt="Rock Paper Scissors Pic">
                     <p class="project-title">
                     <span class="code">(</span>
@@ -377,11 +97,11 @@ right_side {
                     <span class="code">)</span>
                     </p>
                 </a>
-                <a href="https://codepen.io/adam-goodrich/pen/eYJJXzo" target="_blank" class="project project-tile">
-                    <img class="project-image" src="https://media3.s-nbcnews.com/j/newscms/2016_41/1749326/161013-bob-dylan-sunglasses-1104a_c7727c145cc2b0526e413693f8692fbb.fit-760w.jpg" alt="Bob Dylan Looking Cool">
+                <a href="https://adam-goodrich.github.io/web-drum-kit/" target="_blank" class="project project-tile">
+                    <img class="project-image" src="images/drums.png" alt="drum kit preview">
                     <p class="project-title">
                     <span class="code">(</span>
-                        Bob Dylan Tribute Page
+                        JavaScript Drum Set
                     <span class="code">)</span>
                     </p>
                 </a>
@@ -405,7 +125,6 @@ right_side {
             <div class="contact-links">
                 <a href="https://www.linkedin.com/in/adam-goodrich-55169677/" target="_blank" class="btn contact-details"><i class="fab fa-linkedin"></i> LinkedIn<br><div style="font-size: 12px;">linkedin.com</div></a>
                 <a id="profile-link" href="https://github.com/adam-goodrich" target="_blank" class="btn contact-details"><i class="fab fa-github"></i> GitHub<br><div style="font-size: 12px;">github.com/adam-goodrich</div></a>
-                <a href="https://twitter.com/Adam_Goodrich" target="_blank" class="btn contact-details"><i class="fab fa-twitter"></i> Twitter<br><div style="font-size: 12px;">@Adam_Goodrich</div></a>
                 <a href="mailto:agoodrich57@gmail.com" class="btn contact-details"><i class="fas fa-at"></i> Email<br><div style="font-size: 12px;">agoodrich57@gmail.com</div></a>
                 <a href="tel:407-388-5339" class="btn contact-details"><i class="fas fa-mobile-alt"></i> Call Me<br><div style="font-size: 12px;">407-388-5339</div></a>
             </div>
