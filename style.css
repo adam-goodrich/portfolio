@@ -126,6 +126,14 @@
     font-weight: 200;
     color: #00adb5;
   }
+
+  .about-me {
+    font-size: 2.5rem;
+    font-weight: 200;
+    color: #00adb5;
+    text-align: center;
+    padding: 30px 10px 30px 10px;
+  }
   
   .click_here:hover {
     transition: 2s;
