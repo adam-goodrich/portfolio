@@ -214,8 +214,6 @@ nav .navbar-nav li a:hover {
 
 footer {
   font-weight: 500;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   padding: 3rem;
   background: #00adb5;
   text-shadow: 2px 2px 1px #1f1f1f;
