@@ -60,6 +60,7 @@ nav .navbar-nav li a:hover {
   background-color: #000;
   background-image: linear-gradient(#393e46 0%, #222831 100%);
   text-shadow: 2px 2px 1px #1f1f1f;
+  top: 100px;
 }
 
 .welcome-section > p {
@@ -82,13 +83,18 @@ nav .navbar-nav li a:hover {
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
-  .welcome-section-content {
-    padding-top: 300px;
-    padding-bottom: 300px;
+  .welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: #000;
+    background-image: linear-gradient(#393e46 0%, #222831 100%);
+    text-shadow: 2px 2px 1px #1f1f1f;
+    top: 100px;
   }
-
-  /* .projects-section-content {
-    /* padding-top: 150px; */
 }
 
 .projects-section {
@@ -102,9 +108,6 @@ nav .navbar-nav li a:hover {
   margin: 0 auto 6rem auto;
   border-bottom: 0.2rem solid #eeeeee;
   text-shadow: 2px 2px 1px #1f1f1f;
-}
-
-@media (max-width: 28.75em) {
 }
 
 .projects-grid {
