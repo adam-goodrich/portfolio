@@ -82,8 +82,8 @@ nav .navbar-nav li a:hover {
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
-  [class*="col-"] {
-    width: 100%;
+  .welcome-section-content {
+    padding-top: 150px;
   }
 }
 
@@ -101,9 +101,6 @@ nav .navbar-nav li a:hover {
 }
 
 @media (max-width: 28.75em) {
-  .welcome-section {
-    margin-top: 0;
-  }
 }
 
 .projects-grid {
