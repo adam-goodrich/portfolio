@@ -83,7 +83,7 @@ nav .navbar-nav li a:hover {
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .welcome-section-content {
-    margin-top: 250px;
+    padding-top: 250px;
     margin-bottom: 250px;
   }
 }
