@@ -80,6 +80,13 @@ nav .navbar-nav li a:hover {
   color: #ffdd40;
 }
 
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+
 .projects-section {
   text-align: center;
   padding: 10rem 2rem;
@@ -94,8 +101,8 @@ nav .navbar-nav li a:hover {
 }
 
 @media (max-width: 28.75em) {
-  .projects-section-header {
-    font-size: 4rem;
+  .welcome-section {
+    margin-top: 200px;
   }
 }
 
