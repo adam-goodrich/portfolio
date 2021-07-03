@@ -84,12 +84,11 @@ nav .navbar-nav li a:hover {
   /* For mobile phones: */
   .welcome-section-content {
     padding-top: 600px;
-    padding-bottom: 500px;
+    padding-bottom: 200px;
   }
 
-  .projects-section-content {
-    padding-top: 150px;
-  }
+  /* .projects-section-content {
+    /* padding-top: 150px; */
 }
 
 .projects-section {
